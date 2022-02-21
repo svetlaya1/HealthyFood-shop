@@ -1,0 +1,17 @@
+$bg: #eee;
+
+.box {
+    background-color: $bg;
+    &_title {
+        color: #f00;
+    }
+    &_image {
+        max-width: 50px;
+    }
+    &_svg {
+        fill: blueviolet;
+        &:hover {
+            fill: green
+        }
+    }
+}
