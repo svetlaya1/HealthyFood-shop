@@ -6,7 +6,7 @@ const devServer = (isDev) => !isDev ? {} : {
     devServer: {
         open: true,
         hot: true,
-        port: 8080,
+        port: 3000,
     }
 };
 
@@ -22,14 +22,14 @@ module.exports = ({develop}) => ({
       new HtmlWebpackPlugin({
           template: './src/index.html'
       }),
-      new MiniCssExtractPlugin ({
+      new MiniCssExtractPlugin({
           filename: './styles/main.css'
       })
   ],
   module: {
       rules: [
         {
-            test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
+            test: /\.(?:ico|png|jpg|jpeg|svg|)$/i,
             type: 'asset/inline'
         },
         {
