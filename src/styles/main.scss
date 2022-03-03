@@ -255,7 +255,7 @@ body {
     color: $white;
     letter-spacing: 0.13rem;
     text-transform: uppercase;
-    padding: 2.3rem 4.3rem;
+    padding: 2.3rem 5rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
     text-decoration: none;
@@ -269,15 +269,16 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 12.8rem;
+    padding-bottom: 16.5rem;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
     }
-    &__slider {
-        overflow: hidden;
-        padding-top: 100px;
-    }
+}
+
+.slider {
+    overflow: hidden;
+    padding-top: 9.4rem;
 }
 
 .swiper {
@@ -290,28 +291,32 @@ body {
         height: 520px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         z-index: 0;
+        &_white {
+            justify-content: flex-end;
+            &:hover {
+                .swiper-slide__hover {
+                    height: 233px;
+                    opacity: 1;
+                }
+                &::after {
+                    content: '';
+                    background-color: rgba($white, .55);
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    border-radius: 2rem;
+                    z-index: -1;
+                }
+            }
+        }
         &:hover {
             box-shadow:  0 0 0 2px rgba($green, 0.4) inset;
-            .swiper-slide__hover {
-                height: 233px;
-                opacity: 1;
-            }
-            &::after {
-                content: '';
-                background-color: rgba($white, .55);
-                width: calc(100% - 4px);
-                height: calc(100% - 4px);
-                position: absolute;
-                top: 2px;
-                left: 2px;
-                border-radius: 2rem;
-                z-index: -1;
-            }
         }
         &_milk {
             background-image: url(../images/milk.png);
@@ -326,6 +331,7 @@ body {
             font-family: $font-cormorant;
             font-size: 3rem;
             color: $green;
+            margin-top: 5rem;
             margin-bottom: 0;
         }
         &__hover {
@@ -354,11 +360,40 @@ body {
                 display: block;
                 width: 3rem;
                 height: 3rem;
-                background-image: url(../images/plus.svg);
+                background-image: url(../images/plus1.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
 
             }
+        }
+        &_height {
+            height: 685px;
+        }
+        &__cover {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 293px;
+            text-align: center;
+        }
+        &__image {
+            height: 100%;
+        }
+        &__description {
+            font-size: 18px;
+            max-width: 29.7rem;
+            line-height: 1.5;
+            margin-top: 2.2rem;
+        }
+        &__price {
+            font-size: 24px;
+            margin-top: 0.8rem;
+            margin-bottom: 3.2rem;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
     &-pagination {
@@ -381,6 +416,104 @@ body {
     }
     &-button-prev {
         left: initial;
-        right: 100px;
+        right: 82px;
+    }
+}
+
+.counter {
+    display: flex;
+    &__btn {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        background-color: transparent;
+        padding: 0;
+        background-position: center center;
+        border-radius: 100%;
+    }
+    &__minus {
+        pointer-events: none;
+        background-image: url(../images/minus.svg);
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+        opacity: .4;
+    }
+    &__plus {
+        pointer-events: none;
+        background-image: url(../images/plus.svg);
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+    }
+    &__input {
+        text-align: center;
+        font-size: 2.4rem;
+        width: 46px;
+        border: none;
+        padding: 0;
+    }
+}
+
+.about {
+    padding-bottom: 19.3rem;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 620px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        gap: 9rem;
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, .4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/about1.svg);
+                background-size: 44px 41px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url(../images/about2.svg);
+                background-size: 40px 40px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/about3.svg);
+                background-size: 45px 39px;
+            }
+        }
+    }
+}
+
+.trends {
+    &__text {
+        margin: 3.8rem 0 -0.9rem;
     }
 }
