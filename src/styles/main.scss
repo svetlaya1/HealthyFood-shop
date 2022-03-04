@@ -261,6 +261,7 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    border: none;
     &_max {
         padding: 2.3rem 5rem;
     }
@@ -646,5 +647,131 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.delivery {
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 620px;
+    }
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            margin-top: 27px;
+        }
+        &__text {
+            max-width: 40rem;
+            flex-grow: 1;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            margin-top: 64px;
+            margin-left: 120px;
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                font-size: 2.4rem;
+                padding: 0;
+                margin-top: 59px;
+            }
+            &_info {
+                display: flex;
+                align-items: center;
+                a {
+                    color: $green;
+                    text-decoration: none;
+                    padding-left: 30px;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 3rem;
+                    height: 3rem;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                &:nth-child(1) {
+                    &::before {
+                        background-image: url(../images/phone.svg);
+                        background-size: 31px 28px;
+                    }
+                }
+                &:nth-child(2) {
+                    &::before {
+                        background-image: url(../images/mail.svg);
+                        background-size: 28px 40px;
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+        &__form {
+            flex-basis: 589px;
+        }
+    }
+}
+  
+.card {
+    border: 2px solid rgba($green, .4);
+    padding: 3.2rem 5.8rem 4rem;
+    border-radius: 2rem;
+    &__title {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: .6rem;
+    }
+    &__input {
+        border: 1px solid rgba($green, .4);
+        border-radius: 2rem;
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid {
+            border: red;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 36rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link {
+        margin-top: 1.5rem;
+        padding: 2.3rem 4.9rem;
+    }
+    &__docs {
+        color: rgba($green, .6);
+        text-decoration: none;
+        border-bottom: 1px solid #ecedee;
+        cursor: pointer;
     }
 }
