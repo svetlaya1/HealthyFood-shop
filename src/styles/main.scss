@@ -562,6 +562,7 @@ body {
 }
 
 .catalog {
+    padding-bottom: 14.2rem;
     &__text {
         margin-top: 37px;
         margin-bottom: 87px;
@@ -622,6 +623,9 @@ body {
         height: 100%;
         object-fit: contain;
     }
+    &__sause {
+        width: 68%;
+    }
     &__title {
         font-family: $font-cormorant;
         font-size: 3rem;
@@ -653,23 +657,79 @@ body {
 .delivery {
     &__box {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 7rem;
+        justify-content: flex-start;
+        gap: 8.5%;
+        margin-top: 5.7rem;
+        margin-left: 12.3rem;
     }
-    &__text {
-        margin-left: 12rem;
+    &__left {
         flex-basis: 620px;
+    }
+    &__text-1 {
+        margin-bottom: 2.7rem;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #858881;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+        }
+    }
+    &__orange {
+        color: $orange;
+    }
+    &__right {
+        flex-basis: 36%;
+        padding-top: 18px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        margin-top: 46px;
+        padding-left: 0;
+    }
+    &__item {
+        height: 32px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.4;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__mastercard {
+        width: 53px;
+        background-image: url(/src/images/mastercard.svg);
+    }
+    &__visa {
+        width: 74px;
+        background-image: url(/src/images/visa.svg);
+    }
+    &__paypal {
+        width: 87px;
+        background-image: url(/src/images/paypal.svg);
     }
 }
 
 .contact {
-    padding-top: 100px;
+    padding-top: 18.4rem;
     padding-bottom: 100px;
     &-box {
         display: flex;
         justify-content: space-between;
-        &__item {
+        &__left {
             margin-top: 27px;
         }
         &__text {
@@ -679,44 +739,45 @@ body {
             line-height: 1.4;
             margin-top: 64px;
             margin-left: 120px;
-            ul {
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                gap: 13px;
-                font-size: 2.4rem;
-                padding: 0;
-                margin-top: 59px;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            font-size: 2.4rem;
+            padding: 0;
+            margin-top: 61px;
+        }
+        &__item {
+            list-style: none;
+        }
+        &__link {
+            color: $green;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+                display: block;
+                width: 3rem;
+                height: 3rem;
             }
-            &_info {
-                display: flex;
-                align-items: center;
-                a {
-                    color: $green;
-                    text-decoration: none;
-                    padding-left: 30px;
-                }
-                &::before {
-                    content: '';
-                    display: block;
-                    width: 3rem;
-                    height: 3rem;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-                &:nth-child(1) {
-                    &::before {
-                        background-image: url(../images/phone.svg);
-                        background-size: 31px 28px;
-                    }
-                }
-                &:nth-child(2) {
-                    &::before {
-                        background-image: url(../images/mail.svg);
-                        background-size: 28px 40px;
-                        padding-bottom: 4px;
-                    }
-                }
+        }
+        &__tel {
+            &::before {
+                background-image: url(../images/phone.svg);
+                background-size: 31px 28px;
+            }
+        }
+        &__email {
+            &::before {
+                background-image: url(../images/mail.svg);
+                background-size: 28px 40px;
+                padding-bottom: 4px;
             }
         }
         &__form {
