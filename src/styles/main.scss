@@ -471,6 +471,10 @@ body {
 }
 
 .about {
+    background-image: url(../images/about.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
     padding-bottom: 19.3rem;
     &__box {
         display: flex;
@@ -529,6 +533,10 @@ body {
 }
 
 .trends {
+    background-image: url(../images/trends.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
     padding-bottom: 18.9rem;
     &__text {
         margin: 3.8rem 0 -0.9rem;
@@ -562,6 +570,10 @@ body {
 }
 
 .catalog {
+    background-image: url(../images/catalog.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
     padding-bottom: 14.2rem;
     &__text {
         margin-top: 37px;
@@ -655,6 +667,10 @@ body {
 }
 
 .delivery {
+    background-image: url(../images/delivery.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
     &__box {
         display: flex;
         justify-content: flex-start;
