@@ -569,6 +569,9 @@ body {
         @media (max-width: $r_desk) {
             padding: 2rem 3.4rem;
         }
+        @media (max-width: $r_tab) {
+            padding: 2rem 29%;
+        }
     }
 } 
 
@@ -610,8 +613,9 @@ body {
         position: relative;
         z-index: 0;
         transition: .3s;
-        @media (max-width: $r_desk_hd) {
+        @media (max-width: $r_desk_1240) {
             height: 400px;
+            padding: 2rem 2.7rem;
         }
         &_white {
             justify-content: flex-end;
@@ -640,7 +644,7 @@ body {
         &_milk {
             background-image: url(../images/milk.png);
             @media (max-width: $r_desk) {
-                background-size: 70% auto;
+                background-size: 322px auto;
             }
         }
         &_pasta {
@@ -648,7 +652,7 @@ body {
         }
         &_steaks {
             background-image: url(../images/steaks.png);
-            @media (max-width: $r_desk) {
+            @media (max-width: $r_desk_1240) {
                 background-position-x: right;
             }
         }
@@ -662,7 +666,7 @@ body {
                 font-size: 2.2rem;
             }
             @media (max-width: $r_desk) {
-                font-size: 3rem;
+                font-size: 2.6rem;
             }
             @media (max-width: $r_tab) {
                 margin-top: 0;
@@ -1091,11 +1095,25 @@ body {
     &__image {
         width: 100%;
         max-width: 351px;
-        height: 100%;
+        max-height: 205px;
         object-fit: contain;
+    }
+    &__curd {
+        position: absolute;
+        margin: auto;
+        top: 8px;
+        right: 0;
+        left: 0;
+        bottom: 0;
     }
     &__sause {
         width: 68%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
     }
     &__title {
         font-family: $font-cormorant;
@@ -1114,6 +1132,9 @@ body {
         }
         @media (max-width: $r_desk) {
             font-size: 3rem;
+        }
+        @media (max-width: $r_tab) {
+            font-size: 2.4rem;
         }
     }
     &__description {
@@ -1414,14 +1435,14 @@ body {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         &__timetable {
             @media (max-width: $r_tab) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                gap: 2rem;
+                gap: 1rem;
             }
         }
     }
