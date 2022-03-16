@@ -12,7 +12,7 @@ $r_minmob: 320px;
 $r_mob_360: 360px;
 $r_mob_400: 400px;
 $r_mob_500: 500px;
-$r_mob_600: 600px;
+$r_mob_640: 640px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 $r_tab_936: 936px;
@@ -31,6 +31,9 @@ $r_desk_full_1750: 1750px;
 
 html {
     font-size: 10px;
+    @media (max-width: $r_mob_500) {
+        font-size: 8px;
+    }
 }
 
 body {
@@ -124,6 +127,11 @@ body {
             border: 1px solid $green;
             opacity: .8;
         }
+        @media (max-width: $r_mob_500) {
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem;
+        }
          &:hover {
             border: 1px solid $green;
             @media (max-width: $r_desk_hd) {
@@ -141,6 +149,9 @@ body {
          @media (max-width: $r_desk_hd) {
              color: $green;
          }
+         @media (max-width: $r_mob_500) {
+            font-size: 1rem;
+        }
      }
      &__phone, &__burger {
         display: none;
@@ -161,6 +172,11 @@ body {
             opacity: .8;
             padding: 0;
             transition: 0.2s;
+            @media (max-width: $r_mob_500) {
+                width: 4.3rem;
+                height: 4.3rem;
+                background-size: 1.9rem;
+            }
             &:hover {
                 opacity: 1;
             }
@@ -182,6 +198,12 @@ body {
             opacity: .8;
             padding: 0;
             transition: 0.2s;
+            cursor: pointer;
+            @media (max-width: $r_mob_500) {
+                width: 4.5rem;
+                height: 4.5rem;
+                background-size: 2rem;
+            }
             &:hover {
                 opacity: 1;
             }
@@ -192,6 +214,9 @@ body {
             display: flex;
             align-items: center;
             gap: 1.5rem;
+        }
+        @media (max-width: $r_mob_500) {
+            gap: 1.4rem;
         }
      }
 }
@@ -219,6 +244,9 @@ body {
     overflow: hidden;
     @media (max-width: $r_desk_1120) {
         padding-bottom: 34px;
+    }
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 20px;
     }
     &__text {
         padding-top: 4.2rem;
@@ -250,6 +278,9 @@ body {
         margin-top: 5.7rem;
         @media (max-width: $r_tab) {
             text-align: center;
+        }
+        @media (max-width: $r_mob_500) {
+            margin-top: 3.3rem;
         }
     }
     &__flex {
@@ -322,6 +353,9 @@ body {
             margin-top: 3rem;
             border-radius: 100%;
             animation: shadowmob 4s infinite;
+        }
+        @media (max-width: $r_mob_500) {
+            max-width: 220px;
         }
     }
     &__btn {
@@ -494,6 +528,9 @@ body {
     @media (max-width: $r_tab) {
         text-align: center;
     }
+    @media (max-width: $r_mob_360) {
+        font-size: 3.75rem;
+    }
     &__span {
         font-style: italic;
     }
@@ -514,11 +551,17 @@ body {
         @media (max-width: $r_desk_1280) {
             font-size: 1.6rem;
         }
+        @media (max-width: $r_mob_360) {
+            font-size: 1.5rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
         @media (max-width: $r_desk_1280) {
             font-size: 2.2rem;
+        }
+        @media (max-width: $r_mob_360) {
+            font-size: 1.5rem;
         }
     }
     &__delivery {
@@ -554,32 +597,22 @@ body {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
-        @media (max-width: $r_desk_1420) {
-            padding: 1.6rem 2.4rem;
-        }
-        @media (max-width: $r_desk_1330) {
-            padding: 1.6rem 1.8rem;
-        }
-        @media (max-width: $r_desk_1280) {
-            padding: 2rem 3.4rem;
-        }
-        @media (max-width: $r_desk_1120) {
-            padding: 1.7rem 2.1rem;
-        }
-        @media (max-width: $r_desk) {
-            padding: 2rem 3.4rem;
-        }
-        @media (max-width: $r_tab) {
-            padding: 2rem 29%;
-        }
     }
 } 
+
+.counter+.link {
+    flex-grow: 1;
+    text-align: center;
+}
 
 .offer {
     padding-top: 2rem;
     padding-bottom: 16.5rem;
     @media (max-width: $r_desk_1120) {
         padding-bottom: 11.5rem;
+    }
+    @media (max-width: $r_tab) {
+        padding-bottom: 8rem;
     }
     &__text {
         margin-top: 6rem;
@@ -595,6 +628,10 @@ body {
         margin: 0 auto;
         padding-top: 5.4rem;
         padding-bottom: 6rem;
+    }
+    @media (max-width: $r_mob_500) {
+        max-width: 210px;
+        padding-bottom: 7rem;
     }
 }
 
@@ -615,15 +652,25 @@ body {
         transition: .3s;
         @media (max-width: $r_desk_1240) {
             height: 400px;
-            padding: 2rem 2.7rem;
+            padding: 2.2rem 2.7rem;
+        }
+        @media (max-width: $r_mob_500) {
+            height: 240px;
+            padding: 2.2rem 1.7rem;
         }
         &_white {
             justify-content: flex-end;
             background-size: contain;
+            @media (max-width: $r_mob_500) {
+                text-align: center;
+            }
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
                     opacity: 1;
+                    @media (max-width: $r_mob_500) {
+                        height: auto;
+                    }
                 }
                 &::after {
                     content: '';
@@ -645,6 +692,10 @@ body {
             background-image: url(../images/milk.png);
             @media (max-width: $r_desk) {
                 background-size: 322px auto;
+            }
+            @media (max-width: $r_mob_500) {
+                background-size: 137px auto;
+                background-position-x: 13px;
             }
         }
         &_pasta {
@@ -671,11 +722,20 @@ body {
             @media (max-width: $r_tab) {
                 margin-top: 0;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.75rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
         }
         &__hover {
             height: 0;
             opacity: 0;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                height: auto;
+                opacity: 1;
+            }
         }
         &__text {
             color: rgba($green, .7);
@@ -683,6 +743,9 @@ body {
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
             max-width: 263px;
+            @media (max-width: $r_mob_500) {
+                display: none;
+            }
         }
         &__link {
             text-transform: uppercase;
@@ -695,6 +758,11 @@ body {
             letter-spacing: 0.1rem;
             opacity: .8;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.25rem;
+                justify-content: center;
+                gap: 1.125rem;
+            }
             &::before {
                 content: '';
                 display: block;
@@ -703,6 +771,10 @@ body {
                 background-image: url(../images/plus1.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media (max-width: $r_mob_500) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
 
             }
             &:hover {
@@ -804,6 +876,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $r_mob_500) {
+        bottom: -39px;
+    }
 }
 .swiper-pagination-bullet-active {
     background: $orange;
@@ -869,6 +944,9 @@ body {
     @media (max-width: $r_tab_980) {
         padding-bottom: 14.3rem;
     }
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 11rem;
+    }
     &__box {
         display: flex;
         justify-content: space-between;
@@ -876,6 +954,9 @@ body {
         margin-top: 7rem;
         @media (max-width: $r_tab_980) {
             flex-direction: column;
+        }
+        @media (max-width: $r_tab_980) {
+            margin-top: 4rem;
         }
     }
     &__text {
@@ -899,6 +980,9 @@ body {
             max-width: 100%;
             margin-left: 0;
             margin-top: 3rem;
+        }
+        @media (max-width: $r_mob_500) {
+            flex-basis: 90px;
         }
     }
     &__list {
@@ -968,7 +1052,7 @@ body {
     padding-bottom: 18.9rem;
     @media (max-width: $r_tab) {
         margin: 0 auto;
-        padding-bottom: 13.9rem;
+        padding-bottom: 10rem;
     }
     &__text {
         margin: 3.8rem 0 -0.9rem;
@@ -1022,9 +1106,15 @@ body {
 
 .catalog {
     padding-bottom: 14.2rem;
+    @media (max-width: $r_tab) {
+        padding-bottom: 8rem;
+    }
     &__text {
-        margin-top: 37px;
-        margin-bottom: 87px;
+        margin-top: 3.7rem;
+        margin-bottom: 8.7rem;
+        @media (max-width: $r_tab) {
+            margin-bottom: 4rem;
+        }
     }
     &__btn {
         text-transform: uppercase;
@@ -1081,6 +1171,9 @@ body {
         padding: 2.7rem 1.7rem 3.7rem 3rem;
         box-sizing: border-box;
         transition: .3s;
+        @media (max-width: $r_tab) {
+            padding: 2rem 1rem 2rem 2rem;
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, .4) inset;   
         }
@@ -1091,29 +1184,30 @@ body {
         width: 100%;
         height: 205px;
         text-align: center;
+        @media (max-width: $r_tab) {
+            height: 135px;
+        }
     }
     &__image {
         width: 100%;
         max-width: 351px;
         max-height: 205px;
         object-fit: contain;
-    }
-    &__curd {
-        position: absolute;
-        margin: auto;
-        top: 8px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    }
-    &__sause {
-        width: 68%;
         position: absolute;
         margin: auto;
         top: 0;
         right: 0;
         left: 0;
         bottom: 0;
+        @media (max-width: $r_tab) {
+            max-height: 130px;
+        }
+    }
+    &__curd {
+        top: 8px;
+    }
+    &__sause {
+        width: 68%;
     }
     &__title {
         font-family: $font-cormorant;
@@ -1136,6 +1230,9 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2.4rem;
         }
+        @media (max-width: $r_mob_640) {
+            font-size: 2rem;
+        }
     }
     &__description {
         font-size: 1.6rem;
@@ -1145,16 +1242,24 @@ body {
         min-height: 61px;
         max-width: 243px;
         line-height: 1.5;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+            min-height: 65px;
+        }
     }
     &__price {
         font-size: 2.4rem;
         margin-bottom: 3rem;
         margin-top: 0;
+        @media (max-width: $r_tab) {
+            font-size: 2rem;
+        }
     }
     &__footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 5%;
     }
 }
 
@@ -1171,7 +1276,7 @@ body {
         @media (max-width: $r_tab) {
             flex-direction: column;
             max-width: 418px;
-            margin: 5rem auto 0;
+            margin: 4rem auto 0;
         }
     }
     &__left {
@@ -1250,7 +1355,8 @@ body {
     padding-top: 18.4rem;
     padding-bottom: 24.5rem;
     @media (max-width: $r_tab) {
-        padding-top: 13.4rem;
+        padding-top: 8rem;
+        padding-bottom: 16rem;
     }
     &-box {
         display: flex;
@@ -1276,7 +1382,7 @@ body {
             }
             @media (max-width: $r_tab) {
                 text-align: center;
-                margin: 6.4rem auto 0;
+                margin: 4.4rem auto 0;
             }
         }
         &__list {
