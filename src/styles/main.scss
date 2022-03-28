@@ -596,6 +596,9 @@ body {
     }
     &__delivery {
         flex-basis: 111px;
+        @media (max-width: $r_mob_360) {
+            flex-basis: 75px;
+        }
     }
 }
 .link {
@@ -631,6 +634,10 @@ body {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+        @media (max-width: $r_mob_500) {
+            font-size: 1.2rem;
+            padding: 1.7rem 3.4rem;
+        }
     }
 } 
 
@@ -726,6 +733,9 @@ body {
                     left: 2px;
                     border-radius: 2rem;
                     z-index: -1;
+                    @media (max-width: $r_mob_500) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1175,6 +1185,9 @@ body {
         font-size: 1.4rem;
         gap: 1rem;
     }
+    @media (max-width: $r_mob_500) {
+        display: none;
+    }
     &__item {
         flex-basis: 230px;
         text-align: center;
@@ -1205,10 +1218,48 @@ body {
     }
 }
 
+.category-swiper {
+    display: none;
+    margin-top: 41px;
+    margin-bottom: 21px;
+    @media (max-width: $r_mob_500) {
+        display: block;
+        text-align: center;
+    }
+    &__link {
+        height: auto;
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        transition: .3s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.6rem;
+            flex-basis: 140px;
+        }
+        @media (max-width: $r_mob_360) {
+            font-size: 1.25rem;
+            flex-basis: 110px;
+            padding: 1.7rem 0;
+        }
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+            box-shadow: none;
+        }
+    }
+}
+
 .catalog {
     padding-bottom: 14.2rem;
     @media (max-width: $r_tab) {
         padding-bottom: 8rem;
+    }
+    @media (max-width: $r_mob_360) {
+        padding-bottom: 7.5rem;
     }
     &__text {
         margin-top: 3.7rem;
@@ -1238,6 +1289,11 @@ body {
         margin-top: 59px;
         cursor: pointer;
         transition: .3s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+            gap: 1rem;
+            margin-top: 43px;
+        }
         &::before {
             content: '';
             display: block;
@@ -1248,7 +1304,10 @@ body {
             background-repeat: no-repeat;
             opacity: 0.7;
             transition: .3s;
-
+            @media (max-width: $r_mob_500) {
+                width: 2rem;
+                height: 2rem;
+            }
         }
         &:hover {
             color: rgba($green, 1);
@@ -1269,6 +1328,9 @@ body {
     @media (max-width: $r_desk) {
         grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width: $r_mob_500) {
+        gap: 1.5rem;
+    }
     &__item {
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
@@ -1278,8 +1340,31 @@ body {
         @media (max-width: $r_tab) {
             padding: 2rem 1rem 2rem 2rem;
         }
+        @media (max-width: $r_mob_500) {
+            padding: 1.3rem 1rem 1.8rem 1rem;
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, .4) inset;   
+        }
+        &:nth-child(5) {
+            @media (max-width: $r_mob_500) {
+                display: none;;
+            }
+        }
+        &:nth-child(6) {
+            @media (max-width: $r_mob_500) {
+                display: none;;
+            }
+        }
+        &:nth-child(7) {
+            @media (max-width: $r_mob_500) {
+                display: none;;
+            }
+        }
+        &:nth-child(8) {
+            @media (max-width: $r_mob_500) {
+                display: none;;
+            }
         }
     }
     &__cover {
@@ -1290,6 +1375,9 @@ body {
         text-align: center;
         @media (max-width: $r_tab) {
             height: 135px;
+        }
+        @media (max-width: $r_mob_500) {
+            height: 61px;
         }
     }
     &__image {
@@ -1305,6 +1393,10 @@ body {
         bottom: 0;
         @media (max-width: $r_tab) {
             max-height: 130px;
+        }
+        @media (max-width: $r_mob_500) {
+            max-height: 64px;
+            margin: 0 auto;
         }
     }
     &__curd {
@@ -1337,6 +1429,11 @@ body {
         @media (max-width: $r_mob_640) {
             font-size: 2rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.8rem;
+            margin-top: 7px;
+            text-align: center;
+        }
     }
     &__description {
         font-size: 1.6rem;
@@ -1350,6 +1447,13 @@ body {
             font-size: 1.4rem;
             min-height: 65px;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 7px auto 0;
+            max-width: 109px;
+            min-height: 52px;
+        }
     }
     &__price {
         font-size: 2.4rem;
@@ -1357,6 +1461,11 @@ body {
         margin-top: 0;
         @media (max-width: $r_tab) {
             font-size: 2rem;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 14px;
         }
     }
     &__footer {
@@ -1381,6 +1490,9 @@ body {
             flex-direction: column;
             max-width: 418px;
             margin: 4rem auto 0;
+        }
+        @media (max-width: $r_mob_360) {
+            margin: 2.8rem auto 0;
         }
     }
     &__left {
@@ -1444,14 +1556,23 @@ body {
     &__mastercard {
         width: 53px;
         background-image: url(/src/images/mastercard.svg);
+        @media (max-width: $r_mob_360) {
+            width: 40px;
+        }
     }
     &__visa {
         width: 74px;
         background-image: url(/src/images/visa.svg);
+        @media (max-width: $r_mob_360) {
+            width: 60px;
+        }
     }
     &__paypal {
         width: 87px;
         background-image: url(/src/images/paypal.svg);
+        @media (max-width: $r_mob_360) {
+            width: 75px;
+        }
     }
 }
 
@@ -1462,6 +1583,10 @@ body {
         padding-top: 8rem;
         padding-bottom: 16rem;
     }
+    @media (max-width: $r_mob_360) {
+        padding-top: 1rem;
+        padding-bottom: 13rem;
+    }
     &-box {
         display: flex;
         justify-content: space-between;
@@ -1470,6 +1595,9 @@ body {
         }
         @media (max-width: $r_tab) {
             flex-direction: column;
+        }
+        @media (max-width: $r_mob_360) {
+            gap: 16px;
         }
         &__left {
             margin-top: 27px;
@@ -1488,6 +1616,11 @@ body {
                 text-align: center;
                 margin: 4.4rem auto 0;
             }
+            @media (max-width: $r_mob_360) {
+                font-size: 1.5rem;
+                max-width: 300px;
+                margin-top: 3.8rem;
+            }
         }
         &__list {
             display: flex;
@@ -1501,6 +1634,10 @@ body {
                 flex-direction: row;
                 justify-content: space-between;
                 margin-top: 5.4rem;
+            }
+            @media (max-width: $r_mob_360) {
+                margin-top: 2.4rem;
+                font-size: 1.4rem;
             }
         }
         &__item {
@@ -1533,6 +1670,9 @@ body {
             &::before {
                 background-image: url(../images/phone.svg);
                 background-size: 31px 28px;
+                @media (max-width: $r_mob_360) {
+                    background-size: 19px 19px;
+                }
             }
         }
         &__email {
@@ -1540,6 +1680,10 @@ body {
                 background-image: url(../images/mail.svg);
                 background-size: 28px 40px;
                 padding-bottom: 4px;
+                @media (max-width: $r_mob_360) {
+                    background-size: 20px 18px;
+                    padding-bottom: 0;
+                }
             }
         }
         &__form {
@@ -1563,10 +1707,17 @@ body {
         margin: 3rem auto 0;
         max-width: 355px;
     }
+    @media (max-width: $r_mob_360) {
+        padding: 2.4rem 1.7rem 4rem;
+    }
     &__title {
         font-size: 3rem;
         font-family: $font-cormorant;
         margin-top: 0;
+        @media (max-width: $r_mob_360) {
+            text-align: center;
+            font-size: 2.75rem;
+        }
     }
     &__label {
         font-size: 1.2rem;
@@ -1589,6 +1740,10 @@ body {
         &:invalid {
             border: red;
         }
+        @media (max-width: $r_mob_360) {
+            padding: 1.7rem 3rem;
+            margin-bottom: 1.8rem;
+        }
     }
     &__check {
         font-size: 1.2rem;
@@ -1597,10 +1752,20 @@ body {
         max-width: 36rem;
         margin-top: 1.6rem;
         margin-bottom: 0;
+        @media (max-width: $r_mob_360) {
+            text-align: center;
+            max-width: 224px;
+            margin: 1.8em auto 0;
+        }
     }
     &__link {
         margin-top: 1.5rem;
         padding: 2.3rem 4.9rem;
+        @media (max-width: $r_mob_360) {
+            margin: 3.5rem auto 0;
+            display: block;
+            padding: 2.1rem 4.2rem;
+        }
     }
     &__docs {
         color: rgba($green, .6);
@@ -1638,6 +1803,11 @@ body {
             height: 3.8rem;
             margin: 0 auto 3rem;
         }
+        @media (max-width: $r_mob_500) {
+            width: 15rem;
+            height: 3.8rem;
+            margin: 0 auto 3.5rem;
+        }
     } 
     &-list {
         margin-top: 2px;
@@ -1645,7 +1815,8 @@ body {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
+            padding: 0;
         }
         &__timetable {
             @media (max-width: $r_tab) {
@@ -1653,6 +1824,9 @@ body {
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 1rem;
+            }
+            @media (max-width: $r_mob_500) {
+                gap: 1.2rem;
             }
         }
     }
@@ -1691,6 +1865,9 @@ body {
         @media (max-width: $r_desk_1280) {
             font-size: 2.2rem;
         }
+        @media (max-width: $r_tab) {
+            font-size: 3.7rem;
+        }
         &:hover {
             color: $orange;
         }
@@ -1712,7 +1889,7 @@ body {
         padding: 0;
         margin: 0;
         @media (max-width: $r_tab) {
-            margin: 3rem auto;
+            margin: 3rem auto 1.5rem;
         }
         &__item {
             content: "";
@@ -1754,6 +1931,12 @@ body {
             align-items: center;
         }
     }
+    &_copy, &__author {
+        @media (max-width: $r_mob_400) {
+            font-size: 1.25rem;
+            margin-top: 0;
+        }
+    }
     &__platform {
         color: rgba($green, .6);
         text-decoration: none;
@@ -1774,6 +1957,9 @@ footer {
         display: block;
         position: absolute;
         top: -79px;
+        @media (max-width: $r_mob_360) {
+            top: -41px;
+        }
     }
 }
 
